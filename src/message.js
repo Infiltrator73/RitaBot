@@ -40,7 +40,7 @@ module.exports = function(config, message, edited, deleted)
    }
    */
 
-
+   let embed = ''
 
    if (message.author.id === bot.id){
       return
