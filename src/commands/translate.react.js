@@ -50,9 +50,20 @@ module.exports = function(data, client)
 
             // ignore bots
 
-            if (message.author.bot)
-            {
-               return;
+            let embed = ""
+
+            if (message.author.id === bot.id){
+               return
+               } else if (message.webhookID !== null || undefined) {
+               return
+               }
+         
+               // if embed content then utilize
+            
+            if (message.embeds[0]){
+               embed = message.embeds[0]
+               message.content = embed.description
+         
             }
 
             const flagExists = message.reactions.get(emoji);
