@@ -51,6 +51,7 @@ module.exports = function(data, client)
             // ignore bots
 
             let embed = ""
+            let bot = client.user
 
             if (message.author.id === bot.id){
                return
